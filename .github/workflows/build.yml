@@ -1,4 +1,4 @@
-name: Build Xingxing V1.0.6 APK
+name: Build Xingxing V1.0.7 APK
 on:
   workflow_dispatch:
   push:
@@ -18,8 +18,8 @@ jobs:
           gradle-version: '8.9'
       - name: Unpack and test
         run: |
-          unzip -t Xingxing_V1_0_6_fixed.zip
-          unzip -o Xingxing_V1_0_6_fixed.zip
+          unzip -t Xingxing_V1_0_7.zip
+          unzip -o Xingxing_V1_0_7.zip
           cd Dale
           mkdir -p test-classes
           SRC=app/src/main/java/com/dale/todo
@@ -81,6 +81,6 @@ jobs:
           "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify --verbose --print-certs "$APK"
       - uses: actions/upload-artifact@v4
         with:
-          name: Xingxing-V1.0.6-APK
+          name: Xingxing-V1.0.7-APK
           path: Dale/app/build/outputs/apk/release/*.apk
           if-no-files-found: error
