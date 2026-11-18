@@ -20,8 +20,8 @@ jobs:
           gradle-version: '8.9'
       - name: Unpack and test
         run: |
-          unzip -t Xingxing_V1_0_10.zip
-          unzip -o Xingxing_V1_0_10.zip
+          unzip -t Xingxing_V1_0_10_fixed.zip
+          unzip -o Xingxing_V1_0_10_fixed.zip
           cd Dale
           mkdir -p test-classes
           SRC=app/src/main/java/com/dale/todo
